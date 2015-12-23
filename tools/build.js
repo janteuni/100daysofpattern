@@ -4,4 +4,5 @@ export default task(async function build() {
   await require('./clean')();
   await require('./bundle')();
   await require('./render')();
+//  await require('./deploy')();
 });
