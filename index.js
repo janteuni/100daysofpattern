@@ -14,4 +14,4 @@ React.render((
       <Route path="about" component={About} />
     </Route>
   </Router>
-), document.body);
+), document.getElementById('root'));

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router'
-
+import Nav from './Nav';
 export default class App extends React.Component {
 
   constructor (props) {
@@ -10,9 +9,7 @@ export default class App extends React.Component {
    render () {
      return (
        <div>
-          <h1>Hello</h1>
-          <Link to="/about">Link to About</Link>
-          <Link to="/">Link to Home</Link>
+          <Nav />
           {this.props.children}
        </div>
      );

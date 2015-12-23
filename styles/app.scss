@@ -1,4 +1,50 @@
-body {
-  background-color: red;
-  font-size: 18px;
+// RESET
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
 }
+
+a, button {
+  cursor: pointer;
+  color: inherit;
+}
+
+// BASE
+
+body {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+.title {
+  font-family: 'Anaheim', Helvetica, sans-serif;
+}
+
+a {
+  &:hover, &:focus, &:active {
+    color: #F48FB1;
+  }
+}
+// IMPORT
+
+@import 'nav.scss';
