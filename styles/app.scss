@@ -30,6 +30,12 @@ body {
   display: flex;
 }
 
+.middle {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .flex-auto {
   flex: 1 1 auto;
   min-width: 0;
@@ -40,6 +46,10 @@ body {
   font-family: 'Anaheim', Helvetica, sans-serif;
 }
 
+.center {
+  text-align: center;
+}
+
 a {
   &:hover, &:focus, &:active {
     color: #F48FB1;
@@ -47,4 +57,6 @@ a {
 }
 // IMPORT
 
-@import 'nav.scss';
+@import 'nav.scss',
+        'pageNumber.scss',
+        'days.scss';

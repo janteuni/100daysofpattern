@@ -1,4 +1,5 @@
 import React from 'react';
+import D001 from '../components/days/D001';
 
 export default class Home extends React.Component {
 
@@ -8,7 +9,9 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <div>Home</div>
+      <div>
+        <D001 />
+      </div>
     )
   }
 }
