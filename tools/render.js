@@ -4,6 +4,9 @@ import App from '../components/App';
 import task from './lib/task';
 import fs from 'fs';
 
+import ghpages from 'gh-pages';
+import path from 'path';
+
 var Stats = require('../dist/stats.json');
 const rootHtml = React.renderToString(<App />)
 const style = Stats.style
@@ -23,11 +26,11 @@ const Html = `<!doctype html>
     <meta name="description" content="100daysofpattern">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://100daysofpattern.com"/>
-    <link href="${style}" rel="stylesheet"/>
+    <link href="100daysofpattern/${style}" rel="stylesheet"/>
   </head>
   <body>
     <div id="root">${rootHtml}</div>
-    <script async src="${bundle}"></script>
+    <script async src="100daysofpattern/${bundle}"></script>
   </body>
 </html>
 `;
@@ -35,8 +38,8 @@ const Html = `<!doctype html>
 export default task(async function render() {
   var file = './dist/index.html';
   fs.writeFile(file, Html, { flags: 'wx' }, function (err) {
-    if (err) throw err;
     console.log("It's saved!");
+    ghpages.publish('../dist', function(err) {console.log(err)});
   });
 });
 
