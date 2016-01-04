@@ -1,8 +1,12 @@
-.d001 {
-  background-color: #FFF8DC;
+.day {
   background-repeat: repeat;
   height: 780px;
   padding: 3rem;
+}
+
+.d001 {
+  @extend .day;
+  background-color: #FFF8DC;
   background-image: url('../assets/patterns/d001.png');
   h1 {
     font-family: 'Abril Fatface', sans-serif;
@@ -12,49 +16,43 @@
 }
 
 .d002 {
+  @extend .day;
   background-color: #fabadb;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d002.png');
 }
 
 .d003 {
+  @extend .day;
   background-color: #38a489;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d003.png');
 }
 
 .d004 {
+  @extend .day;
   background-color: white;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d004.png');
 }
 
 .d005 {
+  @extend .day;
   background-color: #191919;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d005.png');
 }
 
 .d006 {
+  @extend .day;
   background-color: white;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d006.png');
 }
 
 .d007 {
+  @extend .day;
   background-color: #a8efd6;
-  background-repeat: repeat;
-  height: 780px;
-  padding: 3rem;
   background-image: url('../assets/patterns/d007.png');
+}
+
+.d008 {
+  @extend .day;
+  background-color: white;
+  background-image: url('../assets/patterns/d008.png');
 }

@@ -6,6 +6,7 @@ import D004 from '../components/days/D004';
 import D005 from '../components/days/D005';
 import D006 from '../components/days/D006';
 import D007 from '../components/days/D007';
+import D008 from '../components/days/D008';
 
 export default class Home extends React.Component {
 
@@ -16,6 +17,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <div>
+        <D008 />
         <D007 />
         <D006 />
         <D005 />
