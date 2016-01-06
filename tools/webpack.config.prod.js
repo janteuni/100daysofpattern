@@ -33,13 +33,19 @@ const appConfig  = {
       // load fonts
       {
         test: /\.(woff|eot|svg|ttf|otf)\?.*$/,
-        loader: 'url?limit=100000'
+        loader: 'url'
+      },
+
+      // load assets
+      {
+        test: /\.png$/,
+        loader: "file"
       }
     ]
   },
 
   plugins: [
-    new ExtractTextPlugin('style-[hash].css'),
+    new ExtractTextPlugin('style-[hash].css', { allChunks: true }),
 
     new webpack.DefinePlugin({
       'process.env': {

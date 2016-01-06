@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { Router, DefaultRoute, Route } from 'react-router';
 import App from './components/App';
 import About from './pages/About';
@@ -7,11 +8,15 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import './styles/app.scss';
 
-React.render((
-  <Router history={createBrowserHistory()}>
+const rootComponent = (
+  <Router>
     <Route component={App}>
       <Route path="/" component={Home} />
       <Route path="about" component={About} />
     </Route>
   </Router>
-), document.getElementById('root'));
+);
+
+const mountNode = document.getElementById('root');
+
+render(rootComponent, mountNode);

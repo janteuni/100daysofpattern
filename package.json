@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source --progress --colors --hot --inline --history-api-fallback --silent",
-    "build": "babel-node --eval \"require('./tools/build')().catch(err => console.log(err.stack))\""
+    "build": "babel-node --eval \"require('./tools/build')().catch(err => console.log(err.stack))\"",
+    "preview": "serve dist"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "gh-pages": "^0.8.0",
     "node-sass": "^3.3.3",
     "sass-loader": "^2.0.1",
+    "serve": "^1.4.0",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.11.0",
@@ -35,7 +37,8 @@
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
     "node-libs-browser": "^0.5.3",
-    "react": "^0.13.3",
+    "react": "^0.14.4",
+    "react-dom": "^0.14.5",
     "react-router": "^1.0.2",
     "webpack-stats-plugin": "^0.1.1"
   }

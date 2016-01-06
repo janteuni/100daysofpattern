@@ -33,18 +33,13 @@ module.exports = {
       // load fonts
       {
         test: /\.(woff|eot|svg|ttf|otf)\?.*$/,
-        loader: 'url?limit=100000'
+        loader: 'url'
       },
 
       // load assets
       {
         test: /\.png$/,
-        loader: "url-loader?limit=100000"
-      },
-
-      {
-        test: /\.jpg$/,
-        loader: "file-loader"
+        loader: "file"
       }
     ]
   },

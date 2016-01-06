@@ -1,6 +1,3 @@
-import React from 'react';
-import App from '../components/App';
-
 import task from './lib/task';
 import fs from 'fs';
 
@@ -8,9 +5,8 @@ import ghpages from 'gh-pages';
 import path from 'path';
 
 var Stats = require('../dist/stats.json');
-const rootHtml = React.renderToString(<App />)
-const style = Stats.style
-const bundle = Stats.main
+const style = Stats.style;
+const bundle = Stats.main;
 
 const Html = `<!doctype html>
 <html xmlns:og="http://ogp.me/ns#">
@@ -29,17 +25,21 @@ const Html = `<!doctype html>
     <link href="100daysofpattern/${style}" rel="stylesheet"/>
   </head>
   <body>
-    <div id="root">${rootHtml}</div>
-    <script async src="100daysofpattern/${bundle}"></script>
+    <div id="root"></div>
+    <script src="100daysofpattern/${bundle}"></script>
+    <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
   </body>
 </html>
 `;
 
 export default task(async function render() {
   var file = './dist/index.html';
-  fs.writeFile(file, Html, { flags: 'wx' }, function (err) {
-    console.log("It's saved!");
-    ghpages.publish('../dist', function(err) {console.log(err)});
+  fs.writeFile('./dist/CNAME', '100daysofpattern.com', { flags: 'wx' }, function () {
+    fs.writeFile(file, Html, { flags: 'wx' }, function (err) {
+      console.log("It's saved!");
+      ghpages.publish(path.join(__dirname, '../dist'), function(err) {console.log(err)});
+    });
   });
 });
 

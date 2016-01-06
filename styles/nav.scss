@@ -1,11 +1,16 @@
 .nav-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(black, .1);
+  padding: .5rem;
   a {
     text-decoration: none;
     text-transform: uppercase;
+    background: white;
+    padding: .5rem;
   }
   h1 {
     @extend .flex-auto;
