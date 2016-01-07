@@ -1,7 +1,7 @@
 import React from 'react';
 import PageNumber from '../PageNumber';
 
-export default class D002 extends React.Component {
+export default class Day extends React.Component {
 
   constructor (props) {
     super(props);
@@ -9,8 +9,8 @@ export default class D002 extends React.Component {
 
   render () {
     return (
-      <article className="d002">
-        <PageNumber num='2' classes='white' />
+      <article className={this.props.className}>
+        <PageNumber num={this.props.num} classes={this.props.color} />
       </article>
     )
   }

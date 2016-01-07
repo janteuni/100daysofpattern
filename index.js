@@ -9,7 +9,7 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import './styles/app.scss';
 
 const rootComponent = (
-  <Router>
+  <Router history={createBrowserHistory()}>
     <Route component={App}>
       <Route path="/" component={Home} />
       <Route path="about" component={About} />

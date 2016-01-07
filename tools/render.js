@@ -22,11 +22,11 @@ const Html = `<!doctype html>
     <meta name="description" content="100daysofpattern">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://100daysofpattern.com"/>
-    <link href="100daysofpattern/${style}" rel="stylesheet"/>
+    <link href="${style}" rel="stylesheet"/>
   </head>
   <body>
     <div id="root"></div>
-    <script src="100daysofpattern/${bundle}"></script>
+    <script src="${bundle}"></script>
     <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
   </body>
