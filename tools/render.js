@@ -19,8 +19,8 @@ const Html = `<!doctype html>
     <meta property="og:title" content="100daysofpattern" />
     <meta property="og:type" content="100 Days of pattern" />
     <meta property="og:url" content="http://100daysofpattern.com" />
-    <meta property="og:image" content="100 days of pattern in a personal project inspired by many other '100daysproject', everyday I designed and push one pattern"/>
-    <meta name="description" content="100daysofpattern">
+    <meta property="og:image" content=""/>
+    <meta name="description" content="100 days of pattern in a personal project inspired by many other '100daysproject', everyday I designed and push one pattern">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://100daysofpattern.com"/>
     <link href="${style}" rel="stylesheet"/>

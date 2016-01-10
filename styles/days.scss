@@ -5,6 +5,12 @@
 }
 
 
+.d013 {
+  @extend .day;
+  background-color: white;
+  background-image: url('../assets/patterns/d013.png');
+}
+
 .d012 {
   @extend .day;
   background-color: #fabadb;
