@@ -5,6 +5,10 @@
 }
 
 
+.d015 {
+  @extend .day;
+  background-image: url('../assets/patterns/d015.png');
+}
 
 .d014 {
   @extend .day;
