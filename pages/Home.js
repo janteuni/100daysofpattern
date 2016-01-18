@@ -11,6 +11,7 @@ export default class Home extends React.Component {
 
   render () {
     const days = [
+      { day: 'd021', num:'21', color: 'blue' },
       { day: 'd020', num:'20', color: '' },
       { day: 'd019', num:'19', color: 'white' },
       { day: 'd018', num:'18', color: '' },
