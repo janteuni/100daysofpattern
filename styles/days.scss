@@ -4,6 +4,11 @@
   padding: 3rem;
 }
 
+.d067 {
+  @extend .day;
+  background-image: url('../assets/patterns/d067.png');
+}
+
 .d066 {
   @extend .day;
   background-color: #C0C6FF;
